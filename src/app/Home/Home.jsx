@@ -31,7 +31,7 @@ export default function Home() {
           Deixe a sua estrela te guiar.
         </p>
 
-        <Link href="/Paises" passHref>
+        <Link href="/Apiinfo" passHref>
           <Button
             type="primary"
             className={styles.customButton}
