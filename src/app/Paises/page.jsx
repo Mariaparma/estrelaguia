@@ -13,8 +13,8 @@ export default function Paises() {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
   const [aberto, setAberto] = useState({});
+  const [busca, setBusca] = useState("");
 
-  // Busca os países ao carregar
   useEffect(() => {
     fetchPaises();
   }, []);
@@ -43,10 +43,28 @@ export default function Paises() {
     }));
   };
 
+  
+  const normalizar = (texto) =>
+    texto?.toString().normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+
+  const paisesFiltrados = paises.filter((pais) => {
+    const termo = normalizar(busca);
+
+    return (
+      normalizar(pais.name).includes(termo) ||
+      normalizar(pais.capital).includes(termo) ||
+      normalizar(pais.currency).includes(termo) ||
+      normalizar(pais.abbreviation).includes(termo) ||
+      pais.phone?.toString().includes(termo) ||
+      pais.population?.toString().includes(termo)
+    );
+  });
+
   // Paginação
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
-  const currentCountries = paises.slice(startIndex, endIndex);
+  const currentCountries = paisesFiltrados.slice(startIndex, endIndex);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -61,6 +79,21 @@ export default function Paises() {
     <div className={styles.container}>
       <h1 className={styles.title}>Lista de Países</h1>
 
+      <input
+        type="text"
+        placeholder="Procure aqui..."
+        value={busca}
+        onChange={(e) => setBusca(e.target.value)}
+        className={styles.searchInput}
+      />
+
+      <div className={styles.divider}>
+        <h1>Nessa barra de pesquisa você consegue encontrar imformações pelo </h1>
+        <h1> nome de países, capital, moeda, abreviação, DDI e população.</h1>
+      </div>
+      
+    
+
       {loading ? (
         <div className={styles.loadingWrapper}>
           <Spin size="large" />
@@ -70,7 +103,7 @@ export default function Paises() {
         <>
           <div className={styles.controlsWrapper}>
             <Pagination
-              total={paises.length}
+              total={paisesFiltrados.length}
               showTotal={(total) => `Total ${total} países`}
               pageSize={pageSize}
               current={currentPage}
@@ -84,14 +117,14 @@ export default function Paises() {
           <div className={styles.cardsContainer}>
             {currentCountries.map((pais) => (
               <Card
-                key={pais.id}
+                key={pais.id || `${pais.name}-${pais.abbreviation}`}
                 className={styles.userCard}
                 hoverable
                 onClick={() => toggleCard(pais.id)}
               >
                 <div className={styles.cardContent}>
                   <img
-                    src={pais.media?.flag}
+                    src={pais.media?.flag || "/default-flag.png"}
                     alt={`Bandeira de ${pais.name}`}
                     className={styles.flag}
                   />

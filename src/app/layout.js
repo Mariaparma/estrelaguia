@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-    title: "Wiki-Tech",
+    title: "Estrela Guia",
     description: "Projeto pra mostrar tudo que eu sei",
     icons: {
         icon: "/icons/estrelaguia.png",
@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-    return (
+    return ( 
         <html>
             <body>{children}</body>
         </html>
