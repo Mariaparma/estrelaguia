@@ -6,7 +6,7 @@ const HomePage = () => {
     <div className={`${styles.global} ${styles.homepage}`}>
       <header className={styles['homepage-header']}>
         <div className={styles['logo-container']}>
-        <img src="/icons/estrelaguia.png" alt="Estrela Guia Logo" className={styles.logo} />         
+          <img src="/icons/estrelaguia.png" alt="Estrela Guia Logo" className={styles.logo} />
         </div>
         <nav>
           <ul className={styles['nav-menu']}>
@@ -18,8 +18,30 @@ const HomePage = () => {
       </header>
       <main className={styles['homepage-main']}>
         <section className="intro">
-          <h2>Descubra o melhor conteúdo</h2>
-          <p>Explore nossos serviços e encontre o que você precisa para alcançar seus objetivos.</p>
+        <h3>Bem-vindo ao Estrela Guia</h3>
+        <p>Descubra conteúdos incríveis e explore novas possibilidades.</p>
+        </section>
+        <section className={styles.cards}>
+          <div className={styles.card}>
+            <div className={styles['card-image-container']}>
+              <img src="/images/destino.png" alt="Imagem Genérica" className={styles['card-image']} />
+            </div>
+            <div className={styles['card-content']}>
+              <h4 className={styles['card-title']}>Explore o melhor país pra você fazer sua viagem dos sonhos </h4>
+              <h4 className={styles['card-title']}>Descubra a população, moeda, localização e entre outros... </h4>
+              <a href="/Paises" className={styles['card-button']}>Descubra Mais</a>
+            </div>
+            
+            <div className={styles['card-image-container']}>
+              <img src="/images/destino2.png" alt="Imagem Genérica" className={styles['card-image']} />
+            </div>
+
+            <div className={styles['card-content']}>
+              <h4 className={styles['card-title']}>Explore o melhor país pra você fazer sua viagem dos sonhos </h4>
+              <h4 className={styles['card-title']}>Descubra a população, moeda, localização e entre outros... </h4>
+              <a href="/Paises" className={styles['card-button']}>Descubra Mais</a>
+            </div>
+          </div>
         </section>
       </main>
       <footer className={styles['homepage-footer']}>
