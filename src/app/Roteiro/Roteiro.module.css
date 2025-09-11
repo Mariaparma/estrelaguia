@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Estilos globais */
+.global {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Página principal */
+.homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f3f6fa;
+}
+
+/* Cabeçalho */
+.homepage-header {
+  width: 100%;
+  background: linear-gradient(135deg, #ffffff 0%, #099aad 100%);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 120px;
+  width: 200px;
+  object-fit: contain;
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #f3f6fa;
+}
+
+/* Rodapé */
+.homepage-footer {
+    background: linear-gradient(135deg, #ffffff 0%, #099aad 100%);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
