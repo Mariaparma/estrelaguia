@@ -8,6 +8,8 @@ import "react-toastify/dist/ReactToastify.css";
 import styles from "./Paises.module.css";
 
 export default function Paises() {
+
+  
   const [paises, setPaises] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);

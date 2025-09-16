@@ -11,7 +11,7 @@ const HomePage = () => {
         <nav>
           <ul className={styles['nav-menu']}>
             <li><a href="/Paises">Países</a></li>
-            <li><a href="/servicos">Roteiro</a></li>
+            <li><a href="/Roteiro">Roteiro</a></li>
             <li><a href="/contato">Gastronomia</a></li>
             <li><a href="/contato">Contato</a></li>
           </ul>
@@ -40,7 +40,7 @@ const HomePage = () => {
             <div className={styles['card-content']}>
               <h4 className={styles['card-title']}>Explore o melhor país pra você fazer sua viagem dos sonhos </h4>
               <h4 className={styles['card-title']}>Descubra os melhores pontos turisticos pra fazer sua viagem mais especial </h4>
-              <a href="/Paises" className={styles['card-button']}>Descubra Mais</a>
+              <a href="/Roteiro" className={styles['card-button']}>Descubra Mais</a>
             </div>
 
             <div className={styles['card-image-container']}>
