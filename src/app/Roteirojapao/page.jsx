@@ -76,7 +76,7 @@ export default function RoteiroJapao() {
         <nav>
           <ul className={styles['nav-menu']}>
             <li><a href="/Paises">Países</a></li>
-            <li><a href="/Roteiro">Roteiro</a></li>
+            <li><a href="">Roteiro</a></li>
             <li><a href="/contato">Gastronomia</a></li>
             <li><a href="/contato">Contato</a></li>
           </ul>

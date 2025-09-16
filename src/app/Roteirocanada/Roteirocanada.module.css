@@ -1,11 +1,5 @@
-/* Estrutura geral */
-.global {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f3f6fa;
-  color: #333;
-}
 
-/* Layout principal */
+
 .homepage {
   display: flex;
   flex-direction: column;
@@ -54,7 +48,6 @@
   padding: 2rem;
 }
 
-/* Introdução */
 .header {
   text-align: center;
   margin-bottom: 3rem;
@@ -72,7 +65,7 @@
   line-height: 1.6;
 }
 
-/* Cards do roteiro */
+/* Cards do plano de viagem */
 .cards {
   display: flex;
   flex-direction: column;
@@ -88,7 +81,6 @@
   width: 100%;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
-  color: #fff;
 }
 
 .card:hover {

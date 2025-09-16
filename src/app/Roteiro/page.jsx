@@ -13,6 +13,7 @@ const continentes = {
       pais: 'Canadá',
       imagem: 'https://i.pinimg.com/1200x/58/66/39/586639ad258db9d4ea96536f01b6be5d.jpg',
       descricao: 'Descubra lagos glaciais, florestas e cidades modernas como Toronto e Vancouver.',
+       link: '/Roteirocanada',
     },
   ],
   Europa: [
@@ -111,31 +112,3 @@ export default function DescubraMais() {
     </div>
   );
 }
-import React from 'react';
-import styles from './Roteiro.module.css';
-
-const HomePage = () => {
-  return (
-    <div className={`${styles.global} ${styles.homepage}`}>
-      <header className={styles['homepage-header']}>
-        <div className={styles['logo-container']}>
-          <img src="/icons/estrelaguia.png" alt="Estrela Guia Logo" className={styles.logo} />
-        </div>
-        <nav>
-          <ul className={styles['nav-menu']}>
-            <li><a href="/Paises">Países</a></li>
-            <li><a href="/servicos">Roteiro</a></li>
-            <li><a href="/contato">Gastronomia</a></li>
-            <li><a href="/contato">Contato</a></li>
-          </ul>
-        </nav>
-      </header>
-      
-      <footer className={styles['homepage-footer']}>
-        <p>&copy; 2025 Estrela Guia. Todos os direitos reservados.</p>
-      </footer>
-    </div>
-  );
-};
-
-export default HomePage;
