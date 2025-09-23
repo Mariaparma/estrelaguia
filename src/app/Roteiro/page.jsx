@@ -21,11 +21,13 @@ const continentes = {
       pais: 'França',
       imagem: 'https://i.pinimg.com/736x/c9/f9/71/c9f97196a840c491609435e9a4b283d3.jpg',
       descricao: 'Roteiros românticos por Paris, vinhedos e castelos medievais.',
+      link: '/Roteirofranca',
     },
     {
       pais: 'Itália',
       imagem: 'https://i.pinimg.com/1200x/ec/b8/89/ecb889f8e809934f5868a84cdf37ff36.jpg',
       descricao: 'Arte, história e gastronomia em Roma, Florença e Veneza.',
+      link: '/Roteiroitalia',
     },
   ],
   Ásia: [
@@ -39,6 +41,7 @@ const continentes = {
       pais: 'Tailândia',
       imagem: 'https://i.pinimg.com/736x/91/ab/22/91ab2281edaad46dd43d245fccc3d9a0.jpg',
       descricao: 'Praias paradisíacas, templos budistas e culinária exótica.',
+      link: '/Roteirotailandia',
     },
   ],
   África: [
@@ -46,11 +49,13 @@ const continentes = {
       pais: 'Marrocos',
       imagem: 'https://i.pinimg.com/736x/ef/76/05/ef760512cc4b39da5b6cd80c9e63ee00.jpg',
       descricao: 'Mercados coloridos, desertos e arquitetura islâmica em Marrakech.',
+        link: '/Roteiromarrocos',
     },
     {
       pais: 'África do Sul',
       imagem: 'https://i.pinimg.com/736x/bb/af/01/bbaf01c52567fbda291954a9302b5eed.jpg',
       descricao: 'Safáris, vinícolas e paisagens deslumbrantes em Cape Town.',
+      link: '/Roteiroafricadosul',
     },
   ],
   Oceania: [
@@ -58,11 +63,13 @@ const continentes = {
       pais: 'Austrália',
       imagem: 'https://i.pinimg.com/1200x/73/02/92/7302921d1a65a81a04f57181321a9b14.jpg',
       descricao: 'Praias, vida selvagem e cultura urbana em Sydney e Melbourne.',
+      link: '/Roteiroaustralia',
     },
     {
       pais: 'Nova Zelândia',
       imagem: 'https://i.pinimg.com/1200x/04/56/45/0456456dc6255801746bec74a656aab8.jpg',
       descricao: 'Montanhas, lagos e aventuras ao ar livre em Queenstown e Rotorua.',
+      link: '/Roteironovazelandia',
     },
   ],
 };
