@@ -28,11 +28,11 @@ export default function Home() {
       if (res.ok) {
         setMessageSent(true);
         form.reset();
-        setTimeout(() => setMessageSent(false), 5000); // some depois de 5s
+        setTimeout(() => setMessageSent(false), 5000);
       } else {
         alert("Ocorreu um erro. Tente novamente.");
       }
-    } catch (err) {
+    } catch {
       alert("Ocorreu um erro. Tente novamente.");
     }
   };
@@ -40,14 +40,16 @@ export default function Home() {
   return (
     <main className={styles.container}>
       {/* Informações principais */}
-      <h2 className={styles.info}>Maria Eduarda da Silva Parma</h2>
-      <h2 className={styles.info}>TDS1</h2>
-      <h2 className={styles.info}>SENAI VALINHOS</h2>
+      <section className={styles.infoSection}>
+        <h2 className={styles.info}>Maria Eduarda da Silva Parma</h2>
+        <h2 className={styles.info}>TDS1</h2>
+        <h2 className={styles.info}>SENAI VALINHOS</h2>
+      </section>
 
       {/* Foto */}
       <div className={styles.photo}>
         <Image
-          src="/meu-avatar.png"
+          src="/mariaparma.png"
           alt="Foto do aluno"
           width={220}
           height={220}
@@ -61,35 +63,39 @@ export default function Home() {
         “Só quem sonha consegue alcançar.” – Luan Santana
       </p>
 
+      {/* Contatos */}
       <div className={styles.contacts}>
-  <a
-    href="https://instagram.com/seuusuario"
-    target="_blank"
-    rel="noopener noreferrer"
-    className={styles.contactLink}
-  >
-    <FaInstagram className={styles.icon} /> Instagram
-  </a>
-  <a
-    href="https://www.instagram.com/_mahparma?igsh=Ym91d216ODd1ZHBx"
-    target="_blank"
-    rel="noopener noreferrer"
-    className={styles.contactLink}
-  >
-    <FaLinkedin className={styles.icon} /> LinkedIn
-  </a>
-  <a
-    href="https://github.com/SEU_USUARIO"
-    target="_blank"
-    rel="noopener noreferrer"
-    className={styles.contactLink}
-  >
-    GitHub
-  </a>
-  <a href="mailto:seuemail@email.com" className={styles.contactLink}>
-    <FaEnvelope className={styles.icon} /> Email
-  </a>
-</div>
+        <a
+          href="https://www.instagram.com/_mahparma"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.contactLink}
+        >
+          <FaInstagram className={styles.icon} /> Instagram
+        </a>
+        <a
+          href="https://www.linkedin.com/in/_mahparma"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.contactLink}
+        >
+          <FaLinkedin className={styles.icon} /> LinkedIn
+        </a>
+        <a
+          href="https://github.com/mahparma"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.contactLink}
+        >
+          GitHub
+        </a>
+        <a
+          href="mailto:mariaparma@email.com"
+          className={styles.contactLink}
+        >
+          <FaEnvelope className={styles.icon} /> Email
+        </a>
+      </div>
 
       {/* Formulário de mensagens */}
       <div className={styles.messageBox}>

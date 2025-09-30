@@ -1,0 +1,82 @@
+.container {
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #fffaf5, #f0f8ff);
+  color: #333;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #1e6d7a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+/* GRID 2 em 2 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* CARD com gradiente e texto branco */
+.card {
+  background: linear-gradient(135deg, #1e6d7a 0%, #77d6e2 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.card p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.card strong {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* RESPONSIVO: 1 por linha no celular */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .card h2 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+}
