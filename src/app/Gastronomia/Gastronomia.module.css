@@ -1,8 +1,8 @@
 .container {
   padding: 2rem;
   font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to bottom, #fffaf5, #f0f8ff);
-  color: #333;
+  background: linear-gradient(to bottom, #e0f7ff, #cceeff); /* azul claro */
+  color: #003366; /* azul escuro */
 }
 
 .title {
@@ -10,7 +10,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: #1e6d7a;
+  color: #005f99; /* azul médio */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,6 +19,7 @@
 
 .icon {
   font-size: 2rem;
+  color: #005f99; /* azul médio */
 }
 
 /* GRID 2 em 2 */
@@ -29,9 +30,9 @@
   padding: 0 1rem;
 }
 
-/* CARD com gradiente e texto branco */
+/* CARD com gradiente azul e texto branco */
 .card {
-  background: linear-gradient(135deg, #1e6d7a 0%, #77d6e2 100%);
+  background: linear-gradient(135deg, #005f99 0%, #66ccff 100%);
   color: white;
   border-radius: 12px;
   padding: 1.5rem;
