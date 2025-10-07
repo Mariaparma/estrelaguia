@@ -116,7 +116,7 @@ export default function Paises() {
 
                     {identificador ? (
                       <Link
-                        href={`/entidade/${encodeURIComponent(identificador)}`}
+                        href={`/Entidade/${encodeURIComponent(identificador)}`}
                         className={styles.detailsLink}
                       >
                         Ver detalhes →
